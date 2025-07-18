@@ -1,0 +1,172 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #a7c7e7 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+.logoside {
+  background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+  border-radius: 50%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(33, 147, 176, 0.12);
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 8px 20px;
+  box-shadow: 0 2px 12px rgba(60, 60, 120, 0.1);
+}
+
+.title h1 {
+  margin: 0;
+  color: #3a4a6b;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.todoContainer {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.15);
+  padding: 32px 24px 24px 24px;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.inputForm {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.inputForm input[type="text"] {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid #a7c7e7;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.inputForm input[type="text"]:focus {
+  border-color: #3a4a6b;
+}
+
+.inputForm button {
+  background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(33, 147, 176, 0.08);
+}
+.inputForm button:hover {
+  background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  background: #f4f8fb;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(60, 60, 120, 0.06);
+  margin-bottom: 10px;
+  transition: background 0.2s;
+  gap: 10px;
+}
+.items.completed {
+  background: #e0f7fa;
+  text-decoration: line-through;
+  color: #8ca0b3;
+}
+
+.items span {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #3a4a6b;
+}
+
+.editBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.editBtn button {
+  background: none;
+  border: none;
+  color: #2193b0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.1s;
+  margin-left: 4px;
+}
+.editBtn button:hover {
+  color: #6dd5ed;
+  transform: scale(1.2);
+}
+
+/* Icon styles */
+.header svg,
+.editBtn svg {
+  vertical-align: middle;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+  .todoContainer {
+    max-width: 98vw;
+    padding: 18px 4vw 12px 4vw;
+  }
+  .header {
+    margin-top: 18px;
+    margin-bottom: 12px;
+  }
+  .title {
+    padding: 6px 10px;
+    font-size: 1.2rem;
+  }
+  .inputForm {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .inputForm button {
+    width: 100%;
+  }
+  .items {
+    padding: 10px 6px;
+    font-size: 1rem;
+  }
+}
