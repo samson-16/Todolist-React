@@ -11,7 +11,7 @@ This is a simple **Todo List** application built using **React** and **TypeScrip
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/todo-list-ts.git
+git clone https://github.com/samson-16/Todolist-React.git
 cd todo-list-ts
 
 npm install
